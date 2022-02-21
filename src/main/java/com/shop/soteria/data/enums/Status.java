@@ -1,2 +1,5 @@
-package com.shop.soteria.data.model;public enum Status {
+package com.shop.soteria.data.enums;
+
+public enum Status {
+    PENDING,
 }
