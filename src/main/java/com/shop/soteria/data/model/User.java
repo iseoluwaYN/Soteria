@@ -10,10 +10,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @NotNull
     private String name;
-    @NotNull
     private String email;
-    @NotNull
     private String password;
 }

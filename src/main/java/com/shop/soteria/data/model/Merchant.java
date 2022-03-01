@@ -1,5 +1,8 @@
 package com.shop.soteria.data.model;
 
-public class Merchant extends User{
+import lombok.Data;
 
+@Data
+public class Merchant extends User{
+    private String companyName;
 }
