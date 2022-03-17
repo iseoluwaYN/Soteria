@@ -1,16 +1,17 @@
-package com.shop.soteria.data.service;
+package com.shop.soteria.data.service.customerService;
 
 import com.shop.soteria.data.dto.UserDto;
 import com.shop.soteria.data.model.Customer;
 import com.shop.soteria.data.model.Product;
 
 import com.shop.soteria.data.repository.CustomerRepository;
+import com.shop.soteria.data.service.customerService.CustomerService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CustomerServiceImpl implements CustomerService{
+public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
     CustomerRepository customerRepository;

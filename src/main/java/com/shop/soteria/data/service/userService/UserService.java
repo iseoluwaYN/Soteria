@@ -1,4 +1,4 @@
-package com.shop.soteria.data.service;
+package com.shop.soteria.data.service.customerService;
 
 import com.shop.soteria.data.model.User;
 
