@@ -1,11 +1,11 @@
-package com.shop.soteria.data.service.customerService;
+package com.shop.soteria.data.service.userService;
 
 import com.shop.soteria.data.dto.UserDto;
-import com.shop.soteria.data.model.Customer;
 import com.shop.soteria.data.model.Product;
+import com.shop.soteria.data.model.User;
 
 public interface CustomerService {
-    Customer signUp(UserDto userDto);
+    User signUp(UserDto userDto);
     boolean addToCart(Product prodName);
     boolean removeFromCart(Product product);
 }

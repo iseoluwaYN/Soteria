@@ -1,11 +1,10 @@
-package com.shop.soteria.data.service.customerService;
+package com.shop.soteria.data.service.userService;
 
 import com.shop.soteria.data.dto.UserDto;
-import com.shop.soteria.data.model.Customer;
 import com.shop.soteria.data.model.Product;
 
-import com.shop.soteria.data.repository.CustomerRepository;
-import com.shop.soteria.data.service.customerService.CustomerService;
+import com.shop.soteria.data.model.User;
+import com.shop.soteria.data.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,24 +13,14 @@ import org.springframework.stereotype.Service;
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
-    CustomerRepository customerRepository;
-
+    UserRepository customerRepository;
     @Override
-    public Customer signUp(UserDto userDto) {
-        if(userDto != null){
-            validateUser(userDto);
-            ModelMapper map = new ModelMapper();
-        }
-            return null;
-    }
-
-    private void validateUser(UserDto userDto) {
-
+    public User signUp(UserDto userDto) {
+        return null;
     }
 
     @Override
     public boolean addToCart(Product prodName) {
-
         return false;
     }
 
