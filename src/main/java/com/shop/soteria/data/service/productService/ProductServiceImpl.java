@@ -20,14 +20,14 @@ public class ProductServiceImpl implements ProductService{
 
     private void validateProduct(Product product){
         if(product.getName().isBlank() || product.getName().isEmpty() || product.getName() == null){
-
+                throw new IllegalArgumentException("Complete product details");
         }
         if(product.getDescription().isBlank() || product.getDescription().isEmpty()
                 || product.getDescription() == null){
+            throw new IllegalArgumentException("Complete product details");
         }
-
         if (product.getPrice() < 0 || product.getPrice() == 0){
-
+            throw new IllegalArgumentException("Complete product details");
         }
     }
 
@@ -49,7 +49,7 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public List<Product> getAllProduct() {
-        return null;
+        return productRepository.findAll();
     }
 
     @Override
