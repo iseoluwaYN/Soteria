@@ -4,9 +4,11 @@ import com.shop.soteria.data.dto.ProductDto;
 import com.shop.soteria.data.model.Product;
 import com.shop.soteria.data.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProductServiceImpl implements ProductService{
 
     @Autowired
@@ -54,6 +56,6 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public List<Product> getAllProduct(Long merchantNo) {
-        return productRepository.getProductsByMerchantId(merchantNo);
+        return productRepository.getProductsByMerchantNo(merchantNo);
     }
 }
