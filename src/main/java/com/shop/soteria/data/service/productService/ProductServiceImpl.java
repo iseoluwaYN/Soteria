@@ -6,7 +6,6 @@ import com.shop.soteria.data.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-import java.util.Optional;
 
 public class ProductServiceImpl implements ProductService{
 
@@ -15,7 +14,8 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public void addProduct(Product product) {
-
+        validateProduct(product);
+        productRepository.save(product);
     }
 
     private void validateProduct(Product product){
@@ -54,6 +54,6 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public List<Product> getAllProduct(Long merchantNo) {
-        return null;
+        return productRepository.getProductsByMerchantId(merchantNo);
     }
 }
