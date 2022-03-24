@@ -45,9 +45,15 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public ProductDto updateProduct() {
+    public ProductDto updateProduct(Long id, ProductDto productDto) {
+        if(productDto == null){
+            throw new IllegalArgumentException("Products incomplete");
+        }
+        Product updateProduct = getProduct(id);
+        validateProduct(updateProduct);
         return null;
     }
+
 
     @Override
     public List<Product> getAllProduct() {

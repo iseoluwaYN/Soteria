@@ -11,7 +11,7 @@ public interface ProductService {
     void addProduct(Product product);
     Product getProduct(Long id);
     void deleteProduct(Long id);
-    ProductDto updateProduct();
+    ProductDto updateProduct(Long id,ProductDto productDto);
     List<Product> getAllProduct();
     List<Product> getAllProduct(Long merchantNo);
 }
